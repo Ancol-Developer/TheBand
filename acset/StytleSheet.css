@@ -4,6 +4,7 @@
     box-sizing: border-box;
 }
 html{
+    scroll-behavior: smooth;
     font-family: Arial, Helvetica, sans-serif;
 }
 /* common */
@@ -17,10 +18,50 @@ html{
     margin-left: -8px;
     margin-right: -8px;
 }
+.row::after{
+    content: "";
+    display: block;
+    clear: both;
+}
 .col{
     float: left;
     padding-left: 8px;
     padding-right: 8px;
+}
+.col-third{
+    width: 33.33333%;
+}
+.col-haft{
+    width: 50%;
+}
+.col-full{
+    width: 100%;
+}
+.text-center{
+    text-align: center !important;
+}
+.pull-right{
+    float: right !important;
+}
+.mt-8{
+    margin-top: 8px !important;;
+}
+.mt-16{
+    margin-top: 16px !important;;
+}
+.btn{
+    text-decoration: none;
+    background-color: #000;
+    color: #fff;
+    padding: 11px 16px;
+    display: inline-block;
+    margin-top: 15px;
+    border: none;
+}
+.btn:hover{
+    background-color: #75757575;
+    color: #000;
+    cursor: pointer;
 }
 /* Main */
 #header{
@@ -117,22 +158,17 @@ html{
 #slider .text-heading{
     font-weight: 500;
     font-size: 24px;
-    
-
 }
 #slider .text-discription{
     font-size:15px;
     margin-top:25px;
 
 }
-#content {
-     
-}
 #content .content-section {
     width: 800px;
     margin-left: auto;
     margin-right: auto;
-    padding: 64px 0;
+    padding: 64px 0 112px;
 }
 #content .section-heading{
     font-size: 30px;
@@ -156,12 +192,6 @@ html{
 #content .members-list{
     margin-top: 48px;
     /* overflow: hidden; */
-}
-#content .member-items{
-    float: left;
-    /* width: 33.333333%; */
-    width: calc(100%/3);
-    text-align: center;
 }
 #content .member-name{
     font-size: 15px;
@@ -206,14 +236,7 @@ html{
 }
 /* Places */
 .place-list {
-    margin: 32px -8px 0;
-    padding-bottom: 48px;
-}
-.place-item{
-    float: left;
-    width: 33.333333%;
-    padding: 0 8px;
-    
+    margin-top: 32px;
 }
 .place-list .place-body{
     background-color: #fff;
@@ -240,17 +263,63 @@ html{
     margin-top: 15px;
     line-height: 1.4;
 }
-.place-buy-btn{
-    text-decoration: none;
+
+/* Contact form */
+.contact-content{
+    padding-top: 48px;
+}
+.contact-info{
+    font-size: 18px;
+}
+.contact-info i[class*="ti-"]{
+    width: 30px;
+    display: inline-block;
+    line-height: 1.5;
+}
+.contact-form{
+    font-size:15px;
+}
+.form-control{
+    padding:10px;
+    border: 1px #ccc solid;
+    width:100%;
+}
+.contact-form .form-submit-btn{
+    font-size:15px;
     background-color: #000;
     color: #fff;
-    padding: 11px 16px;
-    display: inline-block;
-    margin-top: 15px;
+    border: none;
+    padding: 10px 16px;
+    float:right;
 }
-.place-buy-btn:hover{
-    background-color: #75757575;
-    color: #000;
+/* Map section */
+.map-section img{
+    width:100%;
+
+}
+/* footer */
+#footer{
+    padding: 64px 16px;
+    text-align: center;
+}
+#footer .socials-list{
+    font-size: 24px ;
+}
+#footer .socials-list a{
+    color: rgba(0, 0, 0, 0.6);
+    text-decoration: none;
+}
+#footer .copyright a:hover,
+#footer .socials-list a:hover{
+    color: rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}
+#footer .copyright{
+    padding-top: 15px;
+    color: rgba(0, 0, 0, 0.6);
+}
+#footer .copyright a{
+    color: rgba(0, 0, 0, 0.6);
 }
 /* Modal */
 .modal {
