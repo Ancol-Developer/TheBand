@@ -60,6 +60,8 @@ html{
     display: inline-block;
     margin-top: 15px;
     border: none;
+    appearance: none;
+    -webkit-appearance: none;
 }
 .btn:hover{
     background-color: #75757575;
@@ -161,7 +163,7 @@ html{
     position: relative;
     margin-top: 46px;
     padding-top: 50%;
-    background: url('/TheBand/acset/img/Slider/Slider1.jpg') top center / cover no-repeat;
+    background: url('./img/Slider/Slider1.jpg') top center / cover no-repeat;
 } 
 #slider .text-content{
     position:absolute;
@@ -181,6 +183,7 @@ html{
 #slider .text-discription{
     font-size:15px;
     margin-top:25px;
+    text-shadow: 0 0 1px #000;
 
 }
 #content .content-section {
